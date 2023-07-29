@@ -5,4 +5,4 @@ select
     total_quantity
 from {{ ref('customers') }}
 
-where total_quantity > 0
+where total_quantity < 0
