@@ -30,5 +30,8 @@ jobs:
       - name: Install packages
         run: dbt deps
 
+      - name: Test Source Freshness
+        run: dbt source freshness
+
       - name: Deploy & Test Models (PROD)
         run: dbt build --profiles-dir . --target prod
